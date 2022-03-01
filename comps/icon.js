@@ -4,14 +4,35 @@ var template_icons = document.createElement("template"); //<template> </template
 //To-do - CREATE THE UI HERE!
 template_icons.innerHTML = `
 <style>
-    #item_cont {
-
+    img{
+        width: 100px;
+        height: 100px;
     }
+
+    #icon_imgs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #item_cont {
+        display: flex;
+        flex-direction: row;
+    }
+
+
 </style>
 
 <div id='item_cont'>
-    <div id='item_text'>
-    <img src='./imgs/reduce.png' /> text
+    <div id='icon_imgs'>
+        <img src='./imgs/reduce.png' /> Reduce
+    </div>
+    <div id='icon_imgs'>
+        <img src='./imgs/recycle.png' /> Recycle
+    </div>
+    <div id='icon_imgs'>
+        <img src='./imgs/reuse.png' /> Reuse
     </div>
 </div>
 `;
