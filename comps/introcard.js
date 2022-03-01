@@ -5,7 +5,7 @@ var template_intro = document.createElement("template"); //<template> </template
 template_intro.innerHTML = `
 <link rel="stylesheet" href="index.css">
 <div class="bubblechat">
-Text Here
+    <p>Text Here</p>
     <div class="formanswer">
         <form action="#">
             <input type="text" class="fname" name="fname" placeholder="Your name">
@@ -32,6 +32,7 @@ class BubbleIntro extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_intro.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
