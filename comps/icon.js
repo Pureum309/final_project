@@ -9,32 +9,24 @@ template_icons.innerHTML = `
         height: 100px;
     }
 
-    #icon_imgs {
+    #item_icon {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
 
-    #item_cont {
-        display: flex;
-        flex-direction: row;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
     }
-
 
 </style>
 
-<div id='item_cont'>
-    <div id='icon_imgs'>
-        <img src='./imgs/reduce.png' /> Reduce
-    </div>
-    <div id='icon_imgs'>
-        <img src='./imgs/recycle.png' /> Recycle
-    </div>
-    <div id='icon_imgs'>
-        <img src='./imgs/reuse.png' /> Reuse
-    </div>
+<div id='item_icon'>
+    <img src='./graphics/tote-bag.png' />
+    <div id = item_text> text </div>
 </div>
+
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -53,6 +45,10 @@ class TheItems extends HTMLElement {
         this.shadowRoot.appendChild(template_icons.content.cloneNode(true)); //use the template to make a clone
         if(this.getAttribute("item_text")) {
             this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
+        }
+
+        if(this.getAttribute("icon_name")) {
+            this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
         }
     }
 
