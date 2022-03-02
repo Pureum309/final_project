@@ -50,6 +50,8 @@ class TheItems extends HTMLElement {
         if(this.getAttribute("icon_name")) {
             this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
         }
+
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
