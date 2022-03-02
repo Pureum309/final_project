@@ -11,7 +11,11 @@ template_logo.innerHTML = `
     align-items: center;
     justify-content: center;
     }
-
+img {
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+}
 
 </style>
 
@@ -40,6 +44,9 @@ class TheLogo extends HTMLElement {
         this.shadowRoot.appendChild(template_logo.content.cloneNode(true)); //use the template to make a clone
         if(this.getAttribute("desc_text")){
             this.shadowRoot.querySelector('#desc_text').innerText = this.getAttribute('desc_text')
+        }
+        if(this.getAttribute("logo_name")) {
+            this.shadowRoot.querySelector("#item_image > img").src = "./graphics/" + this.getAttribute("logo_name");
         }
     }
 
