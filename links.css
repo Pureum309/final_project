@@ -36,5 +36,7 @@ item-comp {
 }
 
 .links_logo img {
-    width: 70%;
+    width: 50%;
+    height: 100%;
+    padding: 1em;
 }
