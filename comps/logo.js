@@ -1,27 +1,28 @@
-//MUST HAVE - CREATE A TEMPLATE TAG
-var template_comp = document.createElement("template"); //<template> </template> RULE
+	//MUST HAVE - CREATE A TEMPLATE TAG
+var template_logo = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_comp.innerHTML = `
+template_logo.innerHTML = `
 <style>
-#desc_text {
-   font-size: 16px;
-}
+#item_image > img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+</style>
 
-
-<div id='logo_cont'>
-    <div id = desc_text> company description lorem ipsum </div>
-<div id = 'item_icon'>
-    <img src='/graphics/ice.png">
+<div id = item_image>
+    <img src = "./graphics/coral.png" alt = " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Logo ">
+    <div id = desc_text>
+    Lorem ipsumdlfksjfleifjslfjdk
+    </div>
 </div>
-</div>
-
-
 `;
 
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheComp extends HTMLElement {
+class TheLogo extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -33,12 +34,9 @@ class TheComp extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_comp.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.appendChild(template_logo.content.cloneNode(true)); //use the template to make a clone
         if(this.getAttribute("desc_text")){
-            this.document.get("#desc_text").innerHTML = this.getAttribute("desc_text");
-        }
-        if(this.getAttribute("item_icon")){
-            this.document.get("#item_icon").innerHTML = this.getAttribute("item_icon");
+            this.shadowRoot.querySelector('#desc_text').innerText = this.getAttribute('desc_text')
         }
     }
 
