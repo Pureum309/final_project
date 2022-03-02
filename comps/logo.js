@@ -4,12 +4,15 @@ var template_logo = document.createElement("template"); //<template> </template>
 //To-do - CREATE THE UI HERE!
 template_logo.innerHTML = `
 <style>
-#item_image > img {
+#item_image {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     }
+
+
 </style>
 
 <div id = item_image>
@@ -46,4 +49,4 @@ class TheLogo extends HTMLElement {
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("item-comp", TheLogo)
+customElements.define("company-link", TheLogo)
