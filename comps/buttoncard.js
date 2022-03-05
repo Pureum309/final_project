@@ -1,16 +1,14 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_chat = document.createElement("template"); //<template> </template> RULE
+var template_comp = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_chat.innerHTML = `
+template_comp.innerHTML = `
 <link rel="stylesheet" href="index.css">
-<div class="bubblechat">
-    <p>Text Here<p>
-        <div class="next-txt-btn">
-            <img src="/comps/icons/arrow.svg" alt="next button">
-            <div>Next</div>
-        </div>
-    </div>
+<div id="bubble_chat">
+    <p>Text Here</p>  
+    <div class="btncard_btn">
+         <a href="something">Button</a>
+    </div>  
 </div>
 `;
 
@@ -27,12 +25,12 @@ class BubbleChat extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_chat.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
+        this.shadowRoot.appendChild(template_comp.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector("#bubble_chat p").innerText = this.getAttribute("desc-text");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("txt-card", BubbleChat)
+customElements.define("button-card", BubbleChat)
