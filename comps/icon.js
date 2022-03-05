@@ -4,16 +4,29 @@ var template_icons = document.createElement("template"); //<template> </template
 //To-do - CREATE THE UI HERE!
 template_icons.innerHTML = `
 <style>
-    #item_cont {
-
+    img{
+        width: 100px;
+        height: 100px;
     }
+
+    #item_icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
 </style>
 
-<div id='item_cont'>
-    <div id='item_text'>
-    <img src='./imgs/reduce.png' /> text
-    </div>
+<div id='item_icon'>
+    <img src='./graphics/tote-bag.png' />
+    <div id = item_text> text </div>
 </div>
+
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -33,6 +46,12 @@ class TheItems extends HTMLElement {
         if(this.getAttribute("item_text")) {
             this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
         }
+
+        if(this.getAttribute("icon_name")) {
+            this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
+        }
+
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
