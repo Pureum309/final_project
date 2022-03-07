@@ -5,17 +5,16 @@ var template_chat = document.createElement("template"); //<template> </template>
 template_chat.innerHTML = `
 <link rel="stylesheet" href="index.css">
 <div class="bubblechat">
-    <p>Text Here<p>
-        <div class="next-txt-btn">
-            <img src="/comps/icons/arrow.svg" alt="next button">
-            <div>Next</div>
-        </div>
+    <p>Text Here</p>
+    <div class="next-txt-btn">
+        <img src="/comps/icons/arrow.svg" alt="next button">
+        <div>Next</div>
     </div>
 </div>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class BubbleChat extends HTMLElement {
+class BubbleText extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -35,4 +34,4 @@ class BubbleChat extends HTMLElement {
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("txt-card", BubbleChat)
+customElements.define("txt-card", BubbleText)
