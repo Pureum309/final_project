@@ -37,10 +37,6 @@ class BubbleIntro extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
-    function nextScene() {
-        this.shadowRoot.querySelector();
-    }
-
 }
 
 //MUST HAVE - define the tag for the custom elements
