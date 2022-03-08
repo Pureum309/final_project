@@ -3,17 +3,19 @@ var template_intro = document.createElement("template"); //<template> </template
 
 //To-do - CREATE THE UI HERE!
 template_intro.innerHTML = `
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="/index.css">
 <div class="bubblechat">
     <p>Text Here</p>
     <div class="formanswer">
         <form action="#">
             <input type="text" class="fname" name="fname" placeholder="Your name">
         </form>
-        <div class="next-btn">
-            <img src="/comps/icons/arrow.svg" alt="next button">
-            <div>Next</div>
-        </div>
+        <a href="/scene1/scene1_1.html">
+            <div class="next-btn">
+                <img src="/comps/icons/arrow.svg" alt="next button">
+                <div>Next</div>
+            </div>
+        </a>
     </div>
 </div>
 `;
@@ -33,6 +35,9 @@ class BubbleIntro extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_intro.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
+        this.shadowRoot.querySelector("a").href=this.getAttribute("link");
+
+
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

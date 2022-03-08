@@ -3,12 +3,15 @@ var template_chatbtn = document.createElement("template"); //<template> </templa
 
 //To-do - CREATE THE UI HERE!
 template_chatbtn.innerHTML = `
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="/index.css">
 <div class="bubblechat">
     <p>Text Here</p>
-    <div class="card-btn">
-        I'll help!
-    </div>
+    <a href="/scene1/scene1_1.html"
+    class="card-btn">
+        <div>
+            I'll help!
+        </div>
+    </a>
 </div>
 `;
 
@@ -27,6 +30,9 @@ class BubbleBtn extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_chatbtn.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
+        this.shadowRoot.querySelector("a").href=this.getAttribute("link");
+        this.shadowRoot.querySelector(".card-btn div").innerText = this.getAttribute("btn");
+
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

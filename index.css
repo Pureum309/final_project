@@ -60,6 +60,12 @@ body {
     border: 1px solid transparent;
 }
 
+.next-txt-btn:hover {
+    fill: #3a6e9f;
+    color:#3a6e9f;
+    border: 1px solid transparent;
+}
+
 .formanswer {
     display: flex;
     justify-content: space-between;
@@ -145,4 +151,15 @@ div.card-btn:hover {
     align-self: center;
     justify-self: end;
     margin-top: 10px;
+}
+
+
+/* Bimo */
+
+.bimo1 {
+    width: 200px;
+    transform: rotatey(180deg);
+    position: absolute;
+    left: 55%;
+    top: 60%;
 }
