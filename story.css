@@ -1,5 +1,5 @@
 body {
-    background-color: #9AD2F5;
+    background: url("./graphics/storybackground.jpeg") repeat-x   ;
     display: flex;
     flex-direction: column;
     align-items: center;
