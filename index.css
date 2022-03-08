@@ -107,7 +107,7 @@ a {
     color: white;
 }
 
-div.card-btn:hover {
+.card-btn:hover {
     background-color:#4095c6;
     /* font-weight: 150; */
     cursor: pointer;
@@ -136,3 +136,5 @@ div.card-btn:hover {
     left: 55%;
     top: 60%;
 }
+
+
