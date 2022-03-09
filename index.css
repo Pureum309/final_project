@@ -164,7 +164,7 @@ div.card-btn:hover {
     position: absolute;
     left: 55%;
     top: 60%;
-    /* display: none; */
+    display: none;
 }
 
 .bimo1:hover {
