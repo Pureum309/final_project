@@ -8,12 +8,9 @@ template_chatbtn.innerHTML = `
 
 <div class="bubblechat">
     <p>Text Here</p>
-    <a href="/scene1/scene1_1.html"
-    class="card-btn">
-        <div>
-            I'll help!
-        </div>
-    </a>
+    <div class="card-btn">
+        I'll help!
+    </div>
 </div>
 `;
 
@@ -32,12 +29,23 @@ class BubbleBtn extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_chatbtn.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
-        this.shadowRoot.querySelector("a").href=this.getAttribute("link");
-        this.shadowRoot.querySelector(".card-btn div").innerText = this.getAttribute("btn");
-
+        this.shadowRoot.querySelector(".card-btn").innerText = this.getAttribute("btn");
+        this.shadowRoot.querySelector(".card-btn").addEventListener("click", this.showScene2);
+        this.shadowRoot.querySelector(".card-btn").addEventListener("click", this.showBimo);
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
+    showScene2() {
+        document.querySelector("#scene1").style.display = "none";
+        console.log("yes");
+        document.querySelector("#scene2").style.display = "block";
+    }
+
+     showBimo () {
+        console.log("yes");
+        document.querySelector(".bimo1").style.display = "block";
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements

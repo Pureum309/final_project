@@ -9,17 +9,64 @@
     <script src="/comps/introcard.js"></script>
     <script src="/comps/txtcard.js"></script>
     <script src="/comps/buttoncard.js"></script>
+    <script src="/comps/character.js"></script>
 </head>
 <body>
+
+    <!-- intro -->
     <intro-card
     desc-text="Hey there!
     
     What's your name?"
     link="/scene1/scene1_1.html">
     </intro-card>
+
+    <!-- Scene 1 -->
+    <button-card
+    desc-text="Hi $fname$,
+
+    My friend Bimo needs help to save his home, family and friends. Can you help?"
+    link="/scene1/scene1_2.html"
+    btn="I'll help"
+    id="scene1">
+    </button-card>
+
+    <!-- Scene 2 -->
+
+    <txt-card
+    desc-text="Cool! (pun intended)
+
+    There he is, tap him to say hello."
+    id="scene2">
+    </txt-card>
+
+    <!-- Scene 3 -->
+
+    <txt-card
+    desc-text="Hi Can,
+
+    I’m Bimo. Thank you for volunteering to help."
+    id="scene3">
+    </txt-card>
+
+     <!-- Scene 4 -->
+
+    <!-- <txt-card
+    desc-text="Hi Can,
+
+    I’m Bimo. Thank you for volunteering to help."
+    id="scene4"> -->
+
+
+
+    <!-- Characters -->
     <div class="intro_character">
         <img class ="polarbear" src="/graphics/Intro.png" alt="polar bear on a melting ice">
     </div>
+
+    <scene-char></scene-char>
+    
+    <!-- <img src="/graphics/clown-fish.png" alt="Bimo the clown fish" class="bimo1"> -->
     
 </body>
 </html>
