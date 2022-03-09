@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
+    font-family: 'Verdana';
 }
 
 /* INTRO CARD */
@@ -44,7 +45,7 @@ body {
     /* border: #549DE3 1px solid; */
 }
 
-.next-btn {
+.next-btn, .next-txt-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +54,13 @@ body {
     top: -5px;
 }
 
-.next-btn:hover {
+.next-btn:hover, .next-txt-btn:hover {
+    fill: #3a6e9f;
+    color:#3a6e9f;
+    border: 1px solid transparent;
+}
+
+.next-txt-btn:hover {
     fill: #3a6e9f;
     color:#3a6e9f;
     border: 1px solid transparent;
@@ -91,35 +98,8 @@ body {
 
 /* BUTTON CARD */
 
-#bubble_chat {
-    width: 300px;
-    height: 160px;
-    border: 4px solid #549DE3;
-    background-color:white;
-    border-radius: 8px;
-    padding: 1em;
-    margin: auto;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.bubblechat {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-.btncard_btn {
-    display: grid;
-    text-decoration: none;
-    font-weight: 100;
-    top: 100%;
-    margin: auto;
-    padding:0.5em 2em;   
-    border-radius:2em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    background-color:#4eb5f1;
-    text-align:center;
-    transition: all 0.2s;   
 }
 
 a {
@@ -127,21 +107,34 @@ a {
     color: white;
 }
 
-div.card-btn:hover {
+.card-btn:hover {
     background-color:#4095c6;
     /* font-weight: 150; */
     cursor: pointer;
 }
 
 .card-btn{
-    height: 20px;
-    width: 80px;
+    height: auto;
+    width: auto;
     background-color: #549DE3;
     text-align: center;
-    padding: .2em;
+    padding: 0.5em;
     border-radius: 4px;
     color: white;
     align-self: center;
     justify-self: end;
     margin-top: 10px;
 }
+
+
+/* Bimo */
+
+.bimo1 {
+    width: 200px;
+    transform: rotatey(180deg);
+    position: absolute;
+    left: 55%;
+    top: 60%;
+}
+
+

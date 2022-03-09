@@ -46,14 +46,14 @@ class TheItems extends HTMLElement {
         this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
         this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
         
-        this.shadowRoot.querySelector('#item_icon').onclick = () => {
+        this.shadowRoot.querySelector('#item_text').onclick = () => {
             this.chageButtoncard();
         }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     chageButtoncard() {
-        document.querySelector('#recyclechat').popupDisply(this.getAttribute("button_text"));
+        document.querySelector('#popchat').popDisply(this.getAttribute("button_text"));
     }
 }
 
