@@ -43,18 +43,18 @@ class TheItems extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_icons.content.cloneNode(true)); //use the template to make a clone
-        if(this.getAttribute("item_text")) {
-            this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
-        }
-
-        if(this.getAttribute("icon_name")) {
-            this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
-        }
-
+        this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
+        this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
         
+        this.shadowRoot.querySelector('#item_icon').onclick = () => {
+            this.chageButtoncard();
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    chageButtoncard() {
+        document.querySelector('#recyclechat').popupDisply(this.getAttribute("button_text"));
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements

@@ -41,4 +41,4 @@ class BubbleBtn extends HTMLElement {
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("button-card", BubbleBtn)
+customElements.define("pop-card", BubbleBtn)
