@@ -10,12 +10,10 @@ template_intro.innerHTML = `
         <form action="#">
             <input type="text" class="fname" name="fname" placeholder="Your name">
         </form>
-        <a href="/scene1/scene1_1.html">
             <div class="next-btn">
                 <img src="/comps/icons/arrow.svg" alt="next button">
                 <div>Next</div>
             </div>
-        </a>
     </div>
 </div>
 `;
@@ -35,12 +33,15 @@ class BubbleIntro extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_intro.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
-        this.shadowRoot.querySelector("a").href=this.getAttribute("link");
-
-
+        this.shadowRoot.querySelector(".next-btn").onclick = () => this.showScene1();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
+    showScene1() {
+        document.querySelector("intro-card").style.display = "none";
+        document.querySelector("#scene1").style.display = "block";
+    }
 
 }
 
