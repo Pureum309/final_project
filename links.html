@@ -22,30 +22,40 @@
         <header-comp head_text="Other ways to help"></header-comp>
     </div>
 
-    <div id=icons>
-        <item-comp 
-        item_text="Reduce"
-        icon_name="tote-bag.png"
-        button_text="not hi"
-        >
-        </item-comp>
-        <item-comp 
-        item_text="Reuse" 
-        icon_name="plant_bottle.png"
-        ></item-comp>
-        <item-comp 
-        item_text="Recycle" 
-        icon_name="recycle.png"
-        ></item-comp>
-       
-        <pop-card id='popchat'></pop-card>
+    <div id="total_pop">
+        <div id ="icons">
+            <item-comp 
+            item_text="Reduce"
+            icon_name="tote-bag.png"
+            button_text="Avoid single-use plastics such as drinking straws"
+            link_name="iberdrola.com/sustainability/how-to-reduce-plastic-use"
+            >
+            </item-comp>
+            <item-comp 
+            item_text="Reuse" 
+            icon_name="plant_bottle.png"
+            button_text="Use an old fruit juice or milk jug to water plants"
+            link_name="plasticsmakeitpossible.com/plastics-at-home/the-ultimate-guide-to-recycling-reusing-and-repurposing-plastic-items/"
+            ></item-comp>
+            <item-comp 
+            item_text="Recycle" 
+            icon_name="recycle.png"
+            button_text="Bring their plastic bottles to any of our Bottle Depots where we pay a Full Deposit"
+            link_name="recyclenow.com/recycling-knowledge/how-is-it-recycled/plastics"
+            ></item-comp>
+        </div>
+        
+        <div id= "pop">
+            <pop-card 
+            id='popchat'
+            ></pop-card>
+        </div>
     </div>
 
     <div>
         <header-comp head_text="Join the change"></header-comp>
     </div>
 
-    <div class = links_logo>
         <company-link 
         logo_name="plasticbank.png"
         desc_text = "Join Plastic Bank to stop ocean plastic and build ethical recycling systems that transform lives and the
@@ -57,7 +67,7 @@
         desc_text = "Join Plastic Bank to stop ocean plastic and build ethical recycling systems that transform lives and the
         environment around the world."
         ></company-link>
-    </div>
+  
 </body>
 
 </html>

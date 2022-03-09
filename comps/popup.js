@@ -30,15 +30,10 @@ template_popup.innerHTML = `
     .popchat p {
         width: 250px;
         height: 120px;
-        margin: 0;
-        padding: 0;
+        text-align: center;
+        padding-top:1em;
     }
-    .popchat img {
-        width: 1.5em;
-        height: 1.5em;
-        margin-bottom: 0;
-        /* border: #549DE3 1px solid; */
-    }
+   
     .pop-btn:hover {
         background-color:#4095c6;
         /* font-weight: 150; */
@@ -58,11 +53,26 @@ template_popup.innerHTML = `
         margin-top: 10px;
     }
 
+    .pop-btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .pop-btn a:hover {
+        background-color:#4095c6;
+        color: #16314b;
+    }
+
+    .close_pop {
+        
+    }
+
 </style>
 <div class="popchat">
+    <div class="close_pop"><button>Close</button></div>
     <p>Text Here</p>
     <div class="pop-btn">
-        I'll help!
+        <a href = "https://www.iberdrola.com/sustainability/how-to-reduce-plastic-use">Learn more</a>
     </div>
 </div>
 `;
@@ -82,12 +92,24 @@ class ThePop extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_popup.content.cloneNode(true)); //use the template to make a clone
         //this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
+        // this.shadowRoot.querySelector(".pop-btn > a").href = "https://www." + this.getAttribute("link_name");
+
+        this.shadowRoot.querySelector('.close_pop').onclick = () => {
+            this.closeDisplay();
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    popDisply(txt="") {
-        this.shadowRoot.querySelector('.popchat').style.display = "block";
+    popDisply(txt, link) {
+        this.shadowRoot.querySelector('.popchat').style.display = "flex";
+        this.shadowRoot.querySelector('.popchat > p').innerText = txt;
+        this.shadowRoot.querySelector(".pop-btn > a").href = "https://www." + link;
     }
+
+    closeDisplay() {
+        this.shadowRoot.querySelector('.popchat').style.display = "none";
+    }
+
 }
 
 //MUST HAVE - define the tag for the custom elements

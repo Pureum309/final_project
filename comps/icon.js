@@ -45,7 +45,7 @@ class TheItems extends HTMLElement {
         this.shadowRoot.appendChild(template_icons.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
         this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
-        
+
         this.shadowRoot.querySelector('#item_text').onclick = () => {
             this.chageButtoncard();
         }
@@ -53,8 +53,9 @@ class TheItems extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     chageButtoncard() {
-        document.querySelector('#popchat').popDisply(this.getAttribute("button_text"));
+        document.querySelector('#popchat').popDisply(this.getAttribute("button_text"), this.getAttribute("link_name"))
     }
+
 }
 
 //MUST HAVE - define the tag for the custom elements
