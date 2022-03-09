@@ -3,9 +3,7 @@ var template_chatbtn = document.createElement("template"); //<template> </templa
 
 //To-do - CREATE THE UI HERE!
 template_chatbtn.innerHTML = `
-
-<link rel="stylesheet" href="/index.css">
-
+<link rel="stylesheet" href="index.css">
 <div class="bubblechat">
     <p>Text Here</p>
     <div class="card-btn">
