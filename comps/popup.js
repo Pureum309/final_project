@@ -31,10 +31,10 @@ template_popup.innerHTML = `
         width: 250px;
         height: 120px;
         text-align: center;
-        padding-top:1em;
+        
     }
    
-    .pop-btn:hover {
+    .pop-btn:hover, .close_pop button {
         background-color:#4095c6;
         /* font-weight: 150; */
         cursor: pointer;
@@ -50,7 +50,7 @@ template_popup.innerHTML = `
         color: white;
         align-self: center;
         justify-self: end;
-        margin-top: 10px;
+        margin-bottom: 0.8em;
     }
 
     .pop-btn a {
@@ -58,18 +58,24 @@ template_popup.innerHTML = `
         color: white;
     }
 
-    .pop-btn a:hover {
+    .pop-btn a:hover, .close_pop button:hover {
         background-color:#4095c6;
         color: #16314b;
     }
 
-    .close_pop {
-        
+    .close_pop button {
+        padding: 0.5em;
+        float: right;
+        background: #549DE3;
+        border: 0;
+        border-radius: 4px;
+        color: white;
+    
     }
 
 </style>
 <div class="popchat">
-    <div class="close_pop"><button>Close</button></div>
+    <div class="close_pop"><button>CLOSE</button></div>
     <p>Text Here</p>
     <div class="pop-btn">
         <a href = "https://www.iberdrola.com/sustainability/how-to-reduce-plastic-use">Learn more</a>
