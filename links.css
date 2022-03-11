@@ -41,3 +41,7 @@ item-comp {
     justify-content: center;
     align-items: center;
 }
+
+#icons:hover {
+    cursor: pointer;
+}

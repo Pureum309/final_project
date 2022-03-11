@@ -102,6 +102,12 @@ class ThePop extends HTMLElement {
 
         this.shadowRoot.querySelector('.close_pop').onclick = () => {
             this.closeDisplay();
+            document.querySelector('#reduce').resetClick();
+            document.querySelector('#reduce').backColor();
+            document.querySelector('#reuse').resetClick();
+            document.querySelector('#reuse').backColor();
+            document.querySelector('#recycle').resetClick();
+            document.querySelector('#recycle').backColor();
         }
     }
 
