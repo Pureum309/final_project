@@ -28,22 +28,37 @@ class BubbleBtn extends HTMLElement {
         this.shadowRoot.appendChild(template_chatbtn.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
         this.shadowRoot.querySelector(".card-btn").innerText = this.getAttribute("btn");
-        this.shadowRoot.querySelector(".card-btn").addEventListener("click", this.showScene2);
-        this.shadowRoot.querySelector(".card-btn").addEventListener("click", this.showBimo);
+        this.scene = 1;
+        this.shadowRoot.querySelector(".card-btn").onclick = () => {
+            document.querySelector("#scene1").nextScene();
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+        nextScene(){
+            if(this.scene === 1) {
+                this.scene = this.scene + 1; console.log(this.scene);
+                document.querySelector("#scene1").style.display = "none";
+                console.log("yes");
+                document.querySelector("#scene2").style.display = "block";
+                document.querySelector("#bimo1").style.display = "block";
+            }
+        }
+    
 
-    showScene2() {
-        document.querySelector("#scene1").style.display = "none";
-        console.log("yes");
-        document.querySelector("#scene2").style.display = "block";
-    }
+    // showScene2() {
+    //     this.scene = this.scene + 1;
+    //     console.log(this.scene);
+    //     document.querySelector("#scene1").style.display = "none";
+    //     console.log("yes");
+    //     document.querySelector("#scene2").style.display = "block";
+    // }
 
-     showBimo () {
-        console.log("yes");
-        document.querySelector(".bimo1").style.display = "block";
-    }
+
+    // showScene6() {
+    //     document.querySelector("#scene5").style.display = "none";
+    //     document.querySelector("#scene6").style.display = "block";
+    // }
 }
 
 //MUST HAVE - define the tag for the custom elements

@@ -3,9 +3,9 @@ var template_char = document.createElement("template"); //<template> </template>
 
 //To-do - CREATE THE UI HERE!
 template_char.innerHTML = `
-<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="./index.css">
 <div class="char">
-    <img src="/graphics/clown-fish.png" alt="Bimo the clown fish" class="bimo1">
+    <img src="./graphics/clown-fish.png">
 </div>
 `;
 
@@ -23,15 +23,15 @@ class SceneChar extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_char.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".char").onclick = () => this.showScene3();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
-    // showScene2() {
-    //     document.querySelector("#scene1").style.display = "none";
-    //     console.log("yes");
-    //     document.querySelector("#scene2").style.display = "block";
-    // }
+    showScene3() {
+        document.querySelector("#scene2").style.display = "none";
+        document.querySelector("#scene3").style.display = "block";
+    }
 
     //  showBimo () {
     //     console.log("yes");
