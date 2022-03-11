@@ -1,19 +1,44 @@
 body {
-    background: url("./graphics/storybackground.jpeg") repeat-x   ;
+    /* The image used */
+        background: url("./graphics/storybackground.jpeg") no-repeat center center fixed;
+    
+    margin: 0;
+    padding: 0;
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
+
+    /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+   
+    overflow: hidden;
+    /* border: 1px solid red; */
+
 }
 
-.turtle-img, .waterbottle-img, .imagefootder, .clownfishgirl-img {
+ 
+body { 
+    padding-bottom: 20px; 
+    /* fixed white gap at the bottom of the page */
+}
+
+
+button-card, txt-card {
+   margin-top: 5em;
+ 
+}
+
+.turtle, .clownfishgirl {
     position: absolute;
     /* width: 300px;
     height: 300px; */
@@ -25,32 +50,103 @@ body {
     display: none;
 }
 
-.nemofish-img > img {
+.nemofish > img {
     position: absolute;
     width: 100px;
     height: 100px;
     right: 3em;
+    top: 40%;
     -webkit-transform: scaleX(-1); /*flip img */
     transform: scaleX(-1);
 
 }   
 
-.shoppingbag-img > img {
-   position: absolute;
-   width: 100px;
-    height: 100px;
-}
-
 .waste > img {
     position: absolute;
     width: 100px;
     height: 100px;
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.6));
+         filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.6));
 }
 
-.waterbottle {
-    background-color: brown;
+.shoppingbag > img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+div.waterbottle > img.waterbottle {
+    /* background-color: brown; */
     left: 0;
+    top: 62%;
+    left: 0;
+    width: 150px;
+    height: 150px;
     transform: rotate(-25deg);
     transform-origin: 20% 40%;
-  
 }
+
+div.plasticglass > img.cup  {
+    top: 52%;
+    left: 25%;
+    width: 65px;
+    height: 65px;
+
+    transform: rotate(15deg);
+    transform-origin: 20% 40%;
+
+    
+}
+
+div.clutery > img.clutery {
+    left: 50%;
+    top: 60%;
+    width: 65px;
+    height: 65px;
+
+    transform: rotate(-15deg);
+    transform-origin: 20% 40%;
+}
+
+.plasticglass {
+    margin: 3em 4em 0;
+}
+
+
+div.garbage > img.garbage {
+    left: 70%;
+    top: 70%;
+    transform: rotate(10deg);
+    transform-origin: 20% 40%;
+}
+
+div.imagefooter {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    width: 33.33%;
+}
+
+.imagefooter > img {
+    position: relative;
+    width: 135px;
+    height: 135px;
+}
+
+
+
+/* .coral {
+    left: 0;
+}
+
+.coral1 {
+    left: 36%;
+}
+
+.reef {
+    right: 0;
+} */
+
