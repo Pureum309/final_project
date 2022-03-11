@@ -3,7 +3,7 @@ var template_intro = document.createElement("template"); //<template> </template
 
 //To-do - CREATE THE UI HERE!
 template_intro.innerHTML = `
-<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="./index.css">
 <div class="bubblechat">
     <p>Text Here</p>
     <div class="formanswer">
@@ -11,7 +11,7 @@ template_intro.innerHTML = `
             <input type="text" class="fname" name="fname" placeholder="Your name">
         </form>
             <div class="next-btn">
-                <img src="/comps/icons/arrow.svg" alt="next button">
+                <img src="./comps/icons/arrow.svg" alt="next button">
                 <div>Next</div>
             </div>
     </div>

@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oceeco: Zero Ocean Plastic</title>
     <link rel="stylesheet" href="index.css">
-    <script src="/comps/introcard.js"></script>
-    <script src="/comps/txtcard.js"></script>
-    <script src="/comps/buttoncard.js"></script>
-    <script src="/comps/character.js"></script>
+    <script src="./comps/introcard.js"></script>
+    <script src="./comps/dblbuttoncard.js"></script>
+    <script src="./comps/txtcard.js"></script>
+    <script src="./comps/buttoncard.js"></script>
+    <script src="./comps/character.js"></script>
 </head>
 <body>
 
@@ -25,7 +26,6 @@
     desc-text="Hi $fname$,
 
     My friend Bimo needs help to save his home, family and friends. Can you help?"
-    link="/scene1/scene1_2.html"
     btn="I'll help"
     id="scene1">
     </button-card>
@@ -50,21 +50,38 @@
 
      <!-- Scene 4 -->
 
-    <!-- <txt-card
-    desc-text="Hi Can,
+     <dblbutton-card
+     desc-text="Can you guess how much plastic bags are used every minute?"
+     id="scene4"
+     btn="1,000,000"
+     btn2="2,000,000"></dblbutton-card>
 
-    I’m Bimo. Thank you for volunteering to help."
-    id="scene4"> -->
+     <!-- Scene 5 -->
+
+     <txt-card
+    desc-text="Worldwide, 1 million plastic bottles are bought every minute and a whopping 2 million plastic bags are used every minute."
+    id="scene5">
+    </txt-card>
+
+    <!-- Scene 6 -->
+    <button-card
+    desc-text="Now, you’ll need a scuba gear for the next quest.."
+    btn="Let's dive"
+    id="scene6">
+    </button-card>
+
 
 
 
     <!-- Characters -->
     <div class="intro_character">
-        <img class ="polarbear" src="/graphics/Intro.png" alt="polar bear on a melting ice">
+        <img class ="polarbear" src="./graphics/Intro.png" alt="polar bear on a melting ice">
     </div>
     
 
-    <scene-char></scene-char>
+    <scene-char
+    alt="Bimo the clown fish" id="bimo1"
+    ></scene-char>
     
     <!-- <img src="/graphics/clown-fish.png" alt="Bimo the clown fish" class="bimo1"> -->
     

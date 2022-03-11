@@ -11,8 +11,8 @@ body {
     height: 160px;
     border: 4px solid #549DE3;
     border-radius: 8px;
-    padding: .5em .8em;
-    margin: 1em .5em;
+    padding: 1em .5em .5em .8em ;
+    margin: 1.5em .5em;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -109,13 +109,13 @@ a {
     color: white;
 }
 
-.card-btn:hover {
+.card-btn:hover, .card-btn2:hover {
     background-color:#4095c6;
     /* font-weight: 150; */
     cursor: pointer;
 }
 
-.card-btn{
+.card-btn, .card-btn2 {
     height: auto;
     width: auto;
     background-color: #549DE3;
@@ -128,11 +128,16 @@ a {
     margin-top: 10px;
 }
 
+.card-btn2 {
+    position: relative;
+    bottom: 0.1em;
+}
 
 /* Bimo */
 
-.bimo1 {
+#bimo1 {
     width: 200px;
+    object-fit: contain;
     transform: rotatey(180deg);
     position: absolute;
     left: 55%;
@@ -140,10 +145,14 @@ a {
     display: none;
 }
 
-.bimo1:hover {
+.char img {
+    width: 200px;
+}
+
+.char img:hover {
     width: 210px;
 }
 
-#scene1, #scene2, #scene3 {
+#scene1, #scene2, #scene3, #scene4, #scene5, #scene6 {
     display: none;
 }
