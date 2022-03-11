@@ -3,11 +3,11 @@ var template_chat = document.createElement("template"); //<template> </template>
 
 //To-do - CREATE THE UI HERE!
 template_chat.innerHTML = `
-<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="./index.css">
 <div class="bubblechat">
     <p>Text Here</p>
     <div class="next-txt-btn">
-        <img src="/comps/icons/arrow.svg" alt="next button">
+        <img src="./comps/icons/arrow.svg" alt="next button">
         <div>Next</div>
     </div>
 </div>
@@ -28,13 +28,30 @@ class BubbleText extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_chat.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubblechat p").innerText = this.getAttribute("desc-text");
-        this.shadowRoot.querySelector(".next-txt-btn").onclick = () => this.showScene3();
+        this.scene = 2;
+        this.shadowRoot.querySelector(".next-txt-btn").onclick = () => {
+            document.querySelector("#scene2").nextScene();
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    showScene3() {
-        document.querySelector("#scene2").style.display = "none";
-        document.querySelector("#scene3").style.display = "block";
+    nextScene(){
+        if(this.scene === 2) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#scene2").style.display = "none";
+            document.querySelector("#scene3").style.display = "block";
+        }
+        if(this.scene === 3) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#scene3").style.display = "none";
+            document.querySelector("#scene4").style.display = "block";
+    
+        }
+        if(this.scene === 5)  {
+            console.log(this.scene);
+            document.querySelector("#scene5").style.display = "none";
+            document.querySelector("#scene6").style.display = "block";
+        }
     }
 }
 
