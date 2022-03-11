@@ -23,7 +23,8 @@ template_icons.innerHTML = `
 </style>
 
 <div id='item_icon'>
-    <img src='./graphics/tote-bag.png' />
+    <img
+    src='./graphics/tote-bag.png' />
     <div id = item_text> text </div>
 </div>
 
@@ -46,9 +47,25 @@ class TheItems extends HTMLElement {
         this.shadowRoot.querySelector("#item_text").innerText = this.getAttribute("item_text");
         this.shadowRoot.querySelector("#item_icon > img").src = "./graphics/" + this.getAttribute("icon_name");
 
+        this.isClick = false;
+
         this.shadowRoot.querySelector('#item_icon').onclick = () => {
             this.chageButtoncard();
+            this.changeImg();
+
+            this.isClick = true; //!isClick -> when false became true when true it bacomes false
         }
+
+        this.shadowRoot.querySelector('#item_icon').onmouseover = () => {
+            this.changeImg();
+        }
+
+        this.shadowRoot.querySelector('#item_icon').onmouseout = () => {
+            if (this.isClick === false) {
+                this.backColor();
+            }
+        }
+   
     }
    
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -56,6 +73,29 @@ class TheItems extends HTMLElement {
         document.querySelector('#popchat').popDisply(this.getAttribute("button_text"), this.getAttribute("link_name"))
     }
 
+    changeImg() {
+        this.shadowRoot.querySelector('#item_icon').style.color = "#549DE3";
+        this.shadowRoot.querySelector('#item_icon').style.fontSize = "1.5em";
+        this.shadowRoot.querySelector('#item_icon').style.border = "thick solid #549DE3";
+        this.shadowRoot.querySelector('#item_icon').style.borderRadius = "15px";
+        this.shadowRoot.querySelector('img').style.height = '150px';
+        this.shadowRoot.querySelector('img').style.width = '150px';
+       
+    }
+
+    backColor() {
+        this.shadowRoot.querySelector('#item_icon').style.color = "white";
+        this.shadowRoot.querySelector('#item_icon').style.fontSize = "20px";
+        this.shadowRoot.querySelector('#item_icon').style.border = "none";
+        this.shadowRoot.querySelector('img').style.height = '100px';
+        this.shadowRoot.querySelector('img').style.width = '100px';
+    }
+
+    resetClick() {
+        this.isClick = false;
+    }
+
+   
 }
 
 //MUST HAVE - define the tag for the custom elements

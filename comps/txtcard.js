@@ -42,12 +42,12 @@ class BubbleText extends HTMLElement {
             document.querySelector("#scene3").style.display = "block";
         }
         if(this.scene === 3) {
-            this.scene = this.scene + 1; console.log(this.scene);
+            this.scene = 5; /*this.scene + 1;*/ console.log(this.scene);
             document.querySelector("#scene3").style.display = "none";
             document.querySelector("#scene4").style.display = "block";
     
         }
-        if(this.scene === 5)  {
+        else if(this.scene === 5)  {
             console.log(this.scene);
             document.querySelector("#scene5").style.display = "none";
             document.querySelector("#scene6").style.display = "block";
