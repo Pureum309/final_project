@@ -16,6 +16,7 @@
     <script src="./comps/txtcard.js"></script>
     <script src="./comps/buttoncard.js"></script>
     <script src="./comps/contcard.js"></script>
+    <script src="./comps/waste.js"></script>
     
 
     <!-- <title>Welcome to OCEECO</title> -->
@@ -38,6 +39,9 @@
     
     id="first"></cont-card>
 
+  
+
+ 
 
     <!-- Scene 1 -->
     <cont-card class="card2" desc-text="Nicely done!
@@ -108,6 +112,13 @@
     ></button-card>
 
 
+
+
+    <waste-comp
+        icon_name="plastic-glass.png"
+        id="#cup"
+    ></waste-comp>
+
     <!-- <div class="graphics"> -->
         <div class="nemofish animal">
             <img src="./graphics/clown-fish.png" alt="orange nemo fish">
@@ -120,7 +131,7 @@
         </div>
 
         <div class="plasticglass waste">
-            <img src="./graphics/plastic-glass.png" alt="plastic cup" class="cup">
+            <img onclick="clickTohide()" value="click to hide" src="./graphics/plastic-glass.png" alt="plastic cup" id="cup">
         </div>
 
         <div class="clutery waste">
@@ -164,3 +175,37 @@
 </body>
 
 </html>
+
+<script> 
+
+// $(document).ready(function(){
+//     $(".cup").click(function(){
+// 		$(this).css("visibility", "hidden");
+// 	});
+
+// })
+
+// function clickTohide() {
+//     document.getElementById("#cup").styte.visibility = "hidden";
+// }
+
+// $(document).ready(function(){
+//   $("#cup").click(function(){
+//     $("img").hide(1000);
+//   });
+
+// });
+
+function clickTohide() {
+    var c = document.getElementById("#cup");
+    if (c.style.visibility === "visible") {
+        c.style.visibility === "none"
+    }
+
+    else {
+        c.style.visibility === "visible"
+    }
+}
+
+
+</script>

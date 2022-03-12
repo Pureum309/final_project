@@ -184,7 +184,12 @@ div.plasticglass  {
     position: relative;
     top: 20%;
     right: 18%;
+    visibility: visible;
 
+}
+
+#cup {
+  cursor: pointer;
 }
 
 div.plasticglass > img {
