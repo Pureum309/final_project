@@ -161,7 +161,7 @@ button-card, txt-card {
 div.waterbottle {
     transform: rotate(-25deg);
     position: relative;
-    right: 55%;
+    left: -50%;
     top: 35%;
 
 }
