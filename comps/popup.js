@@ -113,6 +113,7 @@ class ThePop extends HTMLElement {
                 item.resetClick(); // arr[index].resetClick();
                 item.backColor();
              });
+             this.shadowRoot.querySelector('.popchat').style.transition = '10s';
         }
     }
 

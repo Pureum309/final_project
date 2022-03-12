@@ -78,8 +78,9 @@ class TheItems extends HTMLElement {
         this.shadowRoot.querySelector('#item_icon').style.fontSize = "1.5em";
         this.shadowRoot.querySelector('#item_icon').style.border = "thick solid #549DE3";
         this.shadowRoot.querySelector('#item_icon').style.borderRadius = "15px";
-        this.shadowRoot.querySelector('img').style.height = '150px';
-        this.shadowRoot.querySelector('img').style.width = '150px';
+        this.shadowRoot.querySelector('img').style.transition = "1.5s";
+        this.shadowRoot.querySelector('img').style.height = '125px';
+        this.shadowRoot.querySelector('img').style.width = '125px';
        
     }
 
