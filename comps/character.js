@@ -5,7 +5,7 @@ var template_char = document.createElement("template"); //<template> </template>
 template_char.innerHTML = `
 <link rel="stylesheet" href="./index.css">
 <div class="char">
-    <img src="./graphics/clown-fish.png">
+    <img src="./graphics/nemofish.png">
 </div>
 `;
 

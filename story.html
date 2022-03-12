@@ -16,6 +16,7 @@
     <script src="./comps/txtcard.js"></script>
     <script src="./comps/buttoncard.js"></script>
     <script src="./comps/contcard.js"></script>
+    <script src="./comps/waste.js"></script>
     
 
     <!-- <title>Welcome to OCEECO</title> -->
@@ -110,7 +111,7 @@
 
     <!-- <div class="graphics"> -->
         <div class="nemofish animal">
-            <img src="./graphics/clown-fish.png" alt="orange nemo fish">
+            <img src="./graphics/nemofish.png" alt="orange nemo fish">
         </div>
 
         <!-- Waste graphics -->
@@ -119,21 +120,29 @@
             <img src="./graphics/shopping-bag.png" alt="shopping bag " class="shoppingbag">
         </div>
 
-        <div class="plasticglass waste">
-            <img src="./graphics/plastic-glass.png" alt="plastic cup" class="cup">
-        </div>
-
-        <div class="clutery waste">
-            <img src="./graphics/cutlery.png" alt="plastic set of clutery" class="clutery">
-        </div>
+        <scene-waste
+        img = "./graphics/garbage.png"
+        id="garbage"
+        alt="garbage">
+        </scene-waste>
         
-        <div class="garbage waste">
-            <img src="./graphics/garbage.png" alt="garbage" class="garbage">
-        </div>
+        <scene-waste
+        img = "./graphics/plastic-glass.png"
+        id="cup"
+        alt="plastic cup">
+        </scene-waste>
 
-        <div class="waterbottle waste">
-            <img src="./graphics/water-bottle.png" alt="water-bottle" class="waterbottle">
-        </div>
+        <scene-waste
+        img = "./graphics/cutlery.png"
+        id="cutlery"
+        alt="Plastic set of cutlery">
+        </scene-waste>
+
+        <scene-waste
+        img = "./graphics/water-bottle.png"
+        id="waterbottle"
+        alt="Plastic water bottle">
+        </scene-waste>
 
         <!-- Animal graphics -->
 
@@ -147,6 +156,11 @@
 
         <div class="imagefooter">
 
+                <img src="./graphics/coral.png" alt="coral" class="coral">
+
+                <img src="./graphics/coral (1).png" alt="cora1" class="coral1">
+
+                <img src="./graphics/reef.png" alt="reef" class="reef">
                 <img src="./graphics/coral.png" alt="coral" class="coral">
 
                 <img src="./graphics/coral (1).png" alt="cora1" class="coral1">

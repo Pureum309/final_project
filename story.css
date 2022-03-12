@@ -54,17 +54,21 @@ button-card, cont-card {
 .nemofish > img {
     position: absolute;
     width: 100px;
-    height: 100px;
     right: 3em;
     top: 40%;
-    -webkit-transform: scaleX(-1); /*flip img */
-    transform: scaleX(-1);
+    /* -webkit-transform: scaleX(-1); flip img */
+    /* transform: scaleX(-1); */
+    animation-name: wiggle;
+    animation-duration: 2s;
+    transform-origin: 20% 40%;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
 
 }   
 
 .waste > img {
-    display: flex;
-    position: absolute;
+    /* display: flex;
+    position: absolute; */
     visibility: visible;
     width: 120px;
     height: 120px;
@@ -166,33 +170,23 @@ button-card, cont-card {
     display: none;
 }
 
-div.waterbottle {
+#waterbottle {
     transform: rotate(-25deg);
     position: relative;
-    left: -50%;
-    top: 35%;
+    top: 5%;
+    left: -35%;
 
 }
 
-div.waterbottle > img {
-    width: 150px;
-    height: 150px;
-}
-
-div.plasticglass  {
+#cup  {
     transform: rotate(15deg);
     position: relative;
     top: 20%;
-    right: 18%;
-
+    right: 5%;
 }
 
-div.plasticglass > img {
-    width: 65px;
-    height: 65px;
-}
 
-div.clutery {
+#cutlery {
     transform: rotate(-15deg);
     position: relative;
     top: 30%;
@@ -200,12 +194,8 @@ div.clutery {
 
 }
 
-div.clutery > img {
-    width: 65px;
-    height: 65px;
-}
 
-div.garbage {
+#garbage {
     transform: rotate(10deg);
     position: relative;
     top: 35%;
@@ -219,6 +209,7 @@ div.imagefooter {
     justify-content: center;
     bottom: 0;
     width: 33.33%;
+    background-repeat: repeat;
 }
 
 .imagefooter > img {
