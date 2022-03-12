@@ -6,7 +6,7 @@ template_chat.innerHTML = `
 <link rel="stylesheet" href="./index.css">
 <div class="bubblechat">
     <p>Text Here</p>
-    <div class="next-txt-btn">
+    <div class="next-txt-btn" value="click">
         <img src="./comps/icons/arrow.svg" alt="next button">
         <div>Next</div>
     </div>
@@ -34,6 +34,21 @@ class BubbleText extends HTMLElement {
         }
     }
 
+    // twoFunctions(){
+    //     document.getElementById('next-txt-btn').addEventListener('click', function(){
+    //         connectedCallback();
+    //         connectStorypage();
+    //     });
+    // }
+
+    // connectStorypage(){
+    //     // this.scene = 1;
+    //     this.shadowRoot.querySelector(".next-txt-btn").onclick = () => 
+    //         this.shadowRoot.getElementById("#first").storyNextscene();
+    // }
+
+    
+
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     nextScene(){
         if(this.scene === 2) {
@@ -53,6 +68,14 @@ class BubbleText extends HTMLElement {
             document.querySelector("#scene6").style.display = "block";
         }
     }
+
+    // storyNextscene(){
+    //     if(this.scene === 1) {
+    //         this.scene = this.scene + 1; console.log(this.scene);
+    //         document.querySelector("#storyscene1").style.display = "none";
+    //         document.querySelector("#storyscene2").style.display = "block";
+    //     }
+    // }
 }
 
 //MUST HAVE - define the tag for the custom elements
