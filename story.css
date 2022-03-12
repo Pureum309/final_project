@@ -185,6 +185,7 @@ scene-waste {
 #cup  {
     /* transform: rotate(15deg); */
     position: absolute;
+    /* visibility: visible; */
     top: 55%;
     left: 30%;
     /* transform: scale(.8, 0.8); */
