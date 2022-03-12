@@ -32,16 +32,12 @@ class ContinueBtn extends HTMLElement {
     }
 
     clickTohide(){
-        this.shadowRoot.querySelector(".plasticglass").onclick = () => {
-            document.querySelector(".plasticglass").hideIcons();
+        this.shadowRoot.querySelector(".cup").onclick = () => {
+            document.querySelector(".cup").hideIcons();
         }
     }
 
-    // clickTohide(){
-    //     this.shadowRoot.querySelector(".cup").onclick = () => {
-    //         document.querySelector(".cup").hiddenIcons();
-    //     }
-    // }
+
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     nextScene(){
@@ -53,8 +49,15 @@ class ContinueBtn extends HTMLElement {
         }
     }
 
+    
     hideIcons(){
-        document.querySelector(".plasticglass").style.visibility = "hidden";
+         document.querySelector(".cup").style.visibility = "hidden";
+        // const waste = document.querySelectorAll('.waste img');
+        // waste.forEach(waste => {
+        //     waste.addEventListener('click', () => {
+        //         document.querySelector(".waste img").style.visibility = "hidden";
+        //     })
+        // })
     }
 
 }
