@@ -33,7 +33,7 @@ body {
 /* } */
 
 
-button-card, txt-card {
+button-card, cont-card {
    margin-top: 5em;
  
 }
@@ -48,6 +48,7 @@ button-card, txt-card {
 .card2, .card3, .card4, .card5, 
 .card6, .card7, .card8, .card9 {
     display: none;
+    position: absolute;
 }
 
 .nemofish > img {
@@ -62,7 +63,9 @@ button-card, txt-card {
 }   
 
 .waste > img {
+    display: flex;
     position: absolute;
+    visibility: visible;
     width: 120px;
     height: 120px;
     -webkit-filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.5));
@@ -71,7 +74,12 @@ button-card, txt-card {
          cursor: pointer;
          animation: anti-wiggle 1s ease-in-out;
          animation: wiggle 1s ease-in-out;
+        
 }
+
+/* .waste > img:hover {
+        visibility: hidden;
+} */
 
   
   
