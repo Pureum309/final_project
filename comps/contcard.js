@@ -29,12 +29,14 @@ class ContinueBtn extends HTMLElement {
         this.shadowRoot.querySelector(".cont-btn").onclick = () => {
             document.querySelector("#storyscene1").nextScene();
         }
-    }
 
-    clickTohide(){
-        this.shadowRoot.querySelector(".cup").onclick = () => {
-            document.querySelector(".cup").hideIcons();
-        }
+        
+    // }
+
+    // clickTohide(){
+    //     this.shadowRoot.querySelector(".cup").onclick = () => {
+    //         document.querySelector(".cup").hideIcons();
+    //     }
     }
 
 
@@ -43,22 +45,18 @@ class ContinueBtn extends HTMLElement {
     nextScene(){
         if(this.scene === 1) {
             this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#first").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene1").style.display = "block";
+        }
+        else if(this.scene === 2) {
+            this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#storyscene1").style.display = "none";
             console.log("yes");
             document.querySelector("#storyscene2").style.display = "block";
         }
     }
 
-    
-    hideIcons(){
-         document.querySelector(".cup").style.visibility = "hidden";
-        // const waste = document.querySelectorAll('.waste img');
-        // waste.forEach(waste => {
-        //     waste.addEventListener('click', () => {
-        //         document.querySelector(".waste img").style.visibility = "hidden";
-        //     })
-        // })
-    }
 
 }
 

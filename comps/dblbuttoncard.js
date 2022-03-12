@@ -51,11 +51,6 @@ class DblBubbleBtn extends HTMLElement {
             document.querySelector("#scene5").style.display = "block";
         }
     }
-
-    //  showBimo () {
-    //     console.log("yes");
-    //     document.querySelector(".bimo1").style.display = "block";
-    // }
 }
 
 //MUST HAVE - define the tag for the custom elements

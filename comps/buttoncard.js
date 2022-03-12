@@ -6,9 +6,11 @@ template_chatbtn.innerHTML = `
 <link rel="stylesheet" href="index.css">
 <div class="bubblechat">
     <p>Text Here</p>
-    <div class="card-btn">
-        I'll help!
-    </div>
+    <a href="./story.html">
+        <div class="card-btn">
+            I'll help!
+        </div>
+    </a>
 </div>
 `;
 
@@ -34,16 +36,18 @@ class BubbleBtn extends HTMLElement {
         }
     }
 
-
-
     //To-do - CREATE THE FUNCTIONALITIES HERE!
         nextScene(){
             if(this.scene === 1) {
-                this.scene = this.scene + 1; console.log(this.scene);
+                this.scene = 2; console.log(this.scene);
                 document.querySelector("#scene1").style.display = "none";
                 console.log("yes");
                 document.querySelector("#scene2").style.display = "block";
                 document.querySelector("#bimo1").style.display = "block";
+                this.shadowRoot.querySelector("a").href = "#";
+            }
+            else if (this.scene === 2) {
+                this.shadowRoot.querySelector("a").href = this.getAttribute("link");
             }
         }
     
