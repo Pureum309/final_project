@@ -42,12 +42,10 @@ cont-card {
   line-height: 20px;
 }
 
-.turtle, .clownfishgirl {
-    position: absolute;
-    /* width: 300px;
-    height: 300px; */
-    display: none;
+.turtle {
+  display: none;
 }
+
 
 .card2, .card3, .card4, .card5, 
 .card6, .card7, .card8, .card9 {
@@ -60,7 +58,7 @@ cont-card {
     width: 100px;
     right: 3em;
     top: 40%;
-    /* -webkit-transform: scaleX(-1); flip img */
+    /* -webkit-transform: scaleX(-1); */
     /* transform: scaleX(-1); */
     animation-name: wiggle;
     animation-duration: 2s;
@@ -69,78 +67,6 @@ cont-card {
     animation-timing-function:ease-in-out;
 
 }   
-
-.clownfishgirl-animal {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  width: 100px;
-  height: 100px;
-  -webkit-filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.5));
-       filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.5));
-       cursor: pointer;
-       animation: anti-wiggle 1s ease-in-out;
-       animation: wiggle 1s ease-in-out;
-       outline: 0;
-       animation-name: wiggle;
-       animation-duration: 2s;
-       transform-origin: 20% 40%;
-       animation-iteration-count: infinite;
-       animation-timing-function:ease-in-out;
-}
-.clownfishgirl{
-  width: 100px;
-  height: 100px;
-  display: block;
-  top: 13px;
-  transform: matrix(1.5, -0.5, 0.5, 2, 0, 0);
-}
-
-.shoppingbag{
-  transform: rotate(70deg);
-  width: 200px;
-  height: 160px;
-  display: block;
-  right: 5%;
-  top: 3%;
-  position: absolute;
-}
-.turtle-animal{
-  position: absolute;
-  top: 45%;
-  left: 70%;
-  width: 100px;
-  height: 100px;
-  -webkit-filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.5));
-       filter: drop-shadow(0px 0px 10px rgb(198, 249, 250, 0.5));
-       cursor: pointer;
-       animation: anti-wiggle 1s ease-in-out;
-       animation: wiggle 1s ease-in-out;
-       outline: 0;
-       animation-name: wiggle;
-       animation-duration: 2s;
-       transform-origin: 20% 40%;
-       animation-iteration-count: infinite;
-       animation-timing-function:ease-in-out;
-}
-.waterplasticbottle{
-  transform: rotate(65deg);
-  width: 100px;
-  height: 100px;
-  display: block;
-  right: 3px;
- 
-  position: absolute;
-}
-.turtle{
-  width: 170px;
-  height: 170px;
-  display: block;
-  top: 2px;
- right:50px;
-  transform: rotate(20deg);
-
-}
 
 .waste > img {
     /* display: flex;
@@ -163,7 +89,7 @@ cont-card {
 
   
   
-.waste > img {
+.waste > img, #clownfishgirl, .turtle_char > img, .bottle_char > img {
     outline: 0;
     animation-name: wiggle;
     animation-duration: 2s;
@@ -242,12 +168,12 @@ scene-waste {
   height: 100px;
 }
 
-.shoppingbag > img {
+/* .shoppingbag > img {
     position: absolute;
     width: 100px;
     height: 100px;
     display: none;
-}
+} */
 
 #waterbottle {
     /* transform: rotate(-25deg); */
@@ -280,12 +206,68 @@ scene-waste {
 
 
 #garbage {
-    transform: rotate(10deg);
+    /* transform: rotate(10deg); */
     position: absolute;
     top: 65%;
     left: 75%;
     transform: matrix(1, 0.3, -0.3, 1, 0, 0);
 }
+
+#shoppingbag {
+  position: absolute;
+    top: 49%;
+    left:20%;
+    transform: rotate(90deg);
+    z-index: 1;
+    display: none;
+}
+
+#clownfishgirl {
+  position: absolute;
+  top: 49%;
+  left: 20%;
+  transition: transform 1s;
+  display: none;
+  cursor: pointer;
+}
+
+
+
+.nemo_char img {
+  width: 120px;
+}
+
+div.nemo_char:hover {
+  /* transform: translateY(-5px); */
+  transform: scale(1.1);
+}
+
+#turtle {
+  position: absolute;
+  display: block;
+  top: 70%;
+  left: 45%;
+  transform: rotate(20deg);
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+.turtle_char img {
+  width: 150px;
+}
+
+
+#bottle {
+  position: absolute;
+  display: block;
+  top: 68%;
+  left: 65%;
+  transform: rotate(60deg);
+  cursor: pointer;
+  display: none;
+}
+
 
 div.imagefooter {
     display: flex;
@@ -302,6 +284,7 @@ div.imagefooter {
     width: 135px;
     height: 135px;
 }
+
 
 
 

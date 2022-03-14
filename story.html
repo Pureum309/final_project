@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="story.css">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> -->
 
     <script src="./comps/icon.js"></script>
     <script src="./comps/header.js"></script>
@@ -19,6 +19,8 @@
     <script src="./comps/contcard.js"></script>
     <script src="./comps/waste.js"></script>
     <script src="./comps/help.js"></script>
+    <script src="./comps/nemogirl.js"></script>
+    <script src="./comps/turtle.js"></script>
     
 
     <!-- <title>Welcome to OCEECO</title> -->
@@ -132,9 +134,21 @@
 
         <!-- Waste graphics -->
 
-        <div class="shoppingbag waste">
-            <img src="./graphics/shopping-bag.png" alt="shopping bag " class="shoppingbag">
-        </div>
+        <!-- <div class="shoppingbag waste">
+            <img src="./graphics/shopping-bag.png" alt="shopping bag " id="shoppingbag">
+        </div> -->
+
+        <!-- <scence-waste
+        img = "./graphics/shopping-bag.png"
+        id="shoppingbag"
+        alt="garbage"
+        ></scence-waste> -->
+
+        <scene-waste
+        img = "./graphics/shopping-bag.png"
+        id="shoppingbag"
+        alt="shoppingbag">
+        </scene-waste>
 
         <scene-waste
         img = "./graphics/garbage.png"
@@ -160,20 +174,33 @@
         alt="Plastic water bottle">
         </scene-waste>
 
+        <scene-waste
+        img = "./graphics/water-bottle.png"
+        alt="A bottle stuck inside turtle mouth" id="bottle"
+        ></scene-waste> 
+
         <!-- Animal graphics -->
 
-        <div class="clownfishgirl-animal">
-                <img src="./graphics/clown-fish-girl.png" alt="clown-fish-girl" class="clownfishgirl" id="clownfishgirl">
-                     <!--Add shopping bag so that two objects go together-->
-                <img src="./graphics/shopping-bag.png" alt="shopping bag " class="shoppingbag" id="shoppingbag">
-        </div>
+        <!-- <div class="clownfishgirl animal">
+            <img src="./graphics/clown-fish-girl.png" alt="clown-fish-girl" class="clownfishgirl">
+        </div> -->
 
-        <div class="turtle-animal">
-            <!--Add water bottle so that two objects go together-->
+        <nemo-char
+        alt="Nemo girl the fish" id="clownfishgirl"
+        ></nemo-char>
+
+        <turtle-char
+        alt="A turtle" id="turtle"
+        ></turtle-char>
+
+             
+
+        <!-- <div class="turtle-animal">
+            Add water bottle so that two objects go together
                 <img src="./graphics/water-bottle.png" alt="Plastic water bottle " class="waterplasticbottle" id="waterplasticbottle">
                 <img src="./graphics/turtle.png" alt="turtle"class="turtle"id="turtle">
                
-        </div>
+        </div> -->
 
         <div class="imagefooter">
 
@@ -220,33 +247,33 @@
 
 // });
 
-function clickTohide() {
-    var c = document.getElementById("#cup");
-    if (c.style.visibility === "visible") {
-        c.style.visibility === "none"
-    }
+// function clickTohide() {
+//     var c = document.getElementById("#cup");
+//     if (c.style.visibility === "visible") {
+//         c.style.visibility === "none"
+//     }
 
-    else {
-        c.style.visibility === "visible"
-    }
-}
+//     else {
+//         c.style.visibility === "visible"
+//     }
+// }
 
-$(document).ready(function(){
-    document.querySelector("#waterplasticbottle").style.visibility = "hidden";  
-    document.querySelector("#turtle").style.visibility = "hidden";  
-    document.querySelector("#clownfishgirl").style.visibility = "hidden";  
-    document.querySelector("#shoppingbag").style.visibility = "hidden";  
-    $("#shoppingbag").click(function(){
+// $(document).ready(function(){
+//     document.querySelector("#waterplasticbottle").style.visibility = "hidden";  
+//     document.querySelector("#turtle").style.visibility = "hidden";  
+//     document.querySelector("#clownfishgirl").style.visibility = "hidden";  
+//     document.querySelector("#shoppingbag").style.visibility = "hidden";  
+//     $("#shoppingbag").click(function(){
 
-        document.querySelector("#shoppingbag").style.visibility = "hidden";  
+//         document.querySelector("#shoppingbag").style.visibility = "hidden";  
 
-    });
-    $("#waterplasticbottle").click(function(){
+//     });
+//     $("#waterplasticbottle").click(function(){
 
-document.querySelector("#waterplasticbottle").style.visibility = "hidden";  
+// document.querySelector("#waterplasticbottle").style.visibility = "hidden";  
 
-});
+// });
 
-});
+// });
 
-</script>
+// // </script>
