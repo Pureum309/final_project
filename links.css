@@ -57,3 +57,18 @@ item-comp {
 #join {
     padding-top: 6em;
 }
+
+company-link {
+    font-family: 'Comfortaa';
+    line-height: 1.6;
+    text-align: center;
+}
+
+header-comp {
+    font-family: 'Vollkorn';
+}
+
+item-comp {
+    font-family: 'Vollkorn';
+}
+

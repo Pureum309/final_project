@@ -15,7 +15,7 @@ template_popup.innerHTML = `
         margin: 1em .5em;
         flex-direction: column;
         background-color: white;
-        font-family: 'Verdana';
+        font-family: 'Comfortaa';
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
     .popchat input {
