@@ -61,7 +61,7 @@ class ContinueBtn extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     nextScene(){
         var sh = document.getElementById('shoppingbag');
-        var pl = document.getElementById('waterplasticbottle');
+        var pl = document.getElementById('bottle');
         if(this.scene === 1) {
             this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#first").style.display = "none";
@@ -94,6 +94,7 @@ class ContinueBtn extends HTMLElement {
             document.querySelector("#bottle").style.display = "block";
         }
         else if(pl.style.visibility === 'hidden') {
+            console.log('nn');
             if(this.scene === 5) {
                 this.scene = this.scene + 1; console.log(this.scene);
                 document.querySelector("#storyscene4").style.display = "none";

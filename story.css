@@ -246,7 +246,7 @@ div.nemo_char:hover {
   position: absolute;
   display: block;
   top: 70%;
-  left: 45%;
+  left: 52%;
   transform: rotate(20deg);
   cursor: pointer;
   z-index: 1;
@@ -261,8 +261,8 @@ div.nemo_char:hover {
 #bottle {
   position: absolute;
   display: block;
-  top: 68%;
-  left: 65%;
+  top: 67%;
+  left: 60%;
   transform: rotate(60deg);
   cursor: pointer;
   display: none;
