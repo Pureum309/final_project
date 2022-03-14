@@ -50,6 +50,10 @@ class TheItems extends HTMLElement {
         this.isClick = false;
 
         this.shadowRoot.querySelector('#item_icon').onclick = () => {
+            document.querySelectorAll('item-comp').forEach(function(item, index, arr) {
+                item.backColor();
+             });
+
             this.chageButtoncard();
             this.changeImg();
 
