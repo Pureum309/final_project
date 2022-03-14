@@ -6,7 +6,7 @@ template_contbtn.innerHTML = `
 <link rel="stylesheet" href="index.css">
 <div class="bubble_chat">
     <p>Text Here</p>
-    <div class="cont-btn">Continue</div>
+    <div class="cont-btn">Button Text Here</div>
 </div>
 `;
 
@@ -25,6 +25,7 @@ class ContinueBtn extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_contbtn.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubble_chat p").innerText = this.getAttribute("desc-text");
+        this.shadowRoot.querySelector(".bubble_chat div").innerText = this.getAttribute("btn");
         this.scene = 1;
         this.shadowRoot.querySelector(".cont-btn").onclick = () => {
             document.querySelector("#storyscene1").nextScene();
@@ -55,6 +56,50 @@ class ContinueBtn extends HTMLElement {
             console.log("yes");
             document.querySelector("#storyscene2").style.display = "block";
         }
+        else if(this.scene === 3) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#storyscene2").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene3").style.display = "block";
+        }
+        else if(this.scene === 4) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#storyscene3").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene4").style.display = "block";
+        }
+        else if(this.scene === 5) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#storyscene4").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene5").style.display = "block";
+        }
+        else if(this.scene === 6) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#storyscene5").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene6").style.display = "block";
+        }
+        else if(this.scene === 7) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#storyscene6").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene7").style.display = "block";
+        }
+        else if(this.scene === 8) {
+            this.scene = this.scene + 1; console.log(this.scene);
+            document.querySelector("#storyscene7").style.display = "none";
+            console.log("yes");
+            document.querySelector("#storyscene8").style.display = "block";
+        }
+
+
+        else if(this.scene === 8) {
+                this.shadowRoot.querySelector("a").href = this.getAttribute("link");
+
+        }
+        
+       
     }
 
 

@@ -177,6 +177,13 @@ div.cont-btn:hover {
     cursor: pointer;
 }
 
+/* HELP CARD */
+
+.help {
+  width: auto;
+  height: 70px;
+}
+
 /* Bimo */
 
 #bimo1 {

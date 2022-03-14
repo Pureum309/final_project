@@ -32,9 +32,9 @@ class BubbleBtn extends HTMLElement {
         this.shadowRoot.querySelector(".card-btn").innerText = this.getAttribute("btn");
         this.scene = 1;
         this.shadowRoot.querySelector(".card-btn").onclick = () => {
-            document.querySelector("#scene1").nextScene();
+            document.querySelector("#scene1").nextScene(a);
         }
-    }
+    }   
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
         nextScene(){
