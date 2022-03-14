@@ -6,6 +6,7 @@ template_contbtn.innerHTML = `
 <link rel="stylesheet" href="index.css">
 <div class="bubble_chat">
     <p>Text Here</p>
+    <p class="small">Text Here</p>
     <div class="cont-btn">Button Text Here</div>
 </div>
 `;
@@ -25,6 +26,7 @@ class ContinueBtn extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_contbtn.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".bubble_chat p").innerText = this.getAttribute("desc-text");
+        this.shadowRoot.querySelector(".small").innerText = this.getAttribute("small-text");
         this.shadowRoot.querySelector(".bubble_chat div").innerText = this.getAttribute("btn");
         this.scene = 1;
         this.shadowRoot.querySelector(".cont-btn").onclick = () => {

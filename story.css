@@ -38,6 +38,10 @@ button-card, cont-card, help-card {
  
 }
 
+cont-card {
+  line-height: 20px;
+}
+
 .turtle, .clownfishgirl {
     position: absolute;
     /* width: 300px;
@@ -226,5 +230,6 @@ div.imagefooter {
     width: 135px;
     height: 135px;
 }
+
 
 
