@@ -30,7 +30,20 @@ class ContinueBtn extends HTMLElement {
         this.shadowRoot.querySelector(".bubble_chat div").innerText = this.getAttribute("btn");
         this.scene = 1;
         this.shadowRoot.querySelector(".cont-btn").onclick = () => {
-            document.querySelector("#storyscene1").nextScene();
+            
+            var g = document.getElementById('garbage');
+            var c = document.getElementById('cup');
+            var cu = document.getElementById('cutlery');
+            var wa = document.getElementById('waterbottle');
+            if( g.style.visibility === 'hidden' && c.style.visibility ==='hidden' && cu.style.visibility === 'hidden'&& wa.style.visibility === 'hidden'){
+                document.querySelector("#storyscene1").nextScene();
+                if(this.scene === 3){
+                    document.querySelector("#clownfishgirl").style.visibility = "visible";
+                }
+            }
+            else {
+
+            }
         }
 
         
@@ -46,6 +59,8 @@ class ContinueBtn extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     nextScene(){
+        var sh = document.getElementById('shoppingbag');
+        var pl = document.getElementById('waterplasticbottle');
         if(this.scene === 1) {
             this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#first").style.display = "none";
@@ -60,7 +75,8 @@ class ContinueBtn extends HTMLElement {
             document.querySelector("#shoppingbag").style.visibility = "visible";  
             document.querySelector("#storyscene2").style.display = "block";
         }
-        else if(this.scene === 3) {
+        else if(sh.style.visibility === 'hidden') {
+         if(this.scene === 3) {
             this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#storyscene2").style.display = "none";
             console.log("yes");
@@ -74,36 +90,40 @@ class ContinueBtn extends HTMLElement {
             document.querySelector("#turtle").style.visibility = "visible";  
             document.querySelector("#storyscene4").style.display = "block";
         }
-        else if(this.scene === 5) {
-            this.scene = this.scene + 1; console.log(this.scene);
-            document.querySelector("#storyscene4").style.display = "none";
-            console.log("yes");
-            document.querySelector("#storyscene5").style.display = "block";
-        }
-        else if(this.scene === 6) {
-            this.scene = this.scene + 1; console.log(this.scene);
-            document.querySelector("#storyscene5").style.display = "none";
-            console.log("yes");
-            document.querySelector("#storyscene6").style.display = "block";
-        }
-        else if(this.scene === 7) {
-            this.scene = this.scene + 1; console.log(this.scene);
-            document.querySelector("#storyscene6").style.display = "none";
-            console.log("yes");
-            document.querySelector("#storyscene7").style.display = "block";
-        }
-        else if(this.scene === 8) {
-            this.scene = this.scene + 1; console.log(this.scene);
-            document.querySelector("#storyscene7").style.display = "none";
-            console.log("yes");
-            document.querySelector("#storyscene8").style.display = "block";
+        else if(pl.style.visibility === 'hidden') {
+            if(this.scene === 5) {
+                this.scene = this.scene + 1; console.log(this.scene);
+                document.querySelector("#storyscene4").style.display = "none";
+                console.log("yes");
+                document.querySelector("#storyscene5").style.display = "block";
+            }
+            else if(this.scene === 6) {
+                this.scene = this.scene + 1; console.log(this.scene);
+                document.querySelector("#storyscene5").style.display = "none";
+                console.log("yes");
+                document.querySelector("#storyscene6").style.display = "block";
+            }
+            else if(this.scene === 7) {
+                this.scene = this.scene + 1; console.log(this.scene);
+                document.querySelector("#storyscene6").style.display = "none";
+                console.log("yes");
+                document.querySelector("#storyscene7").style.display = "block";
+            }
+            else if(this.scene === 8) {
+                this.scene = this.scene + 1; console.log(this.scene);
+                document.querySelector("#storyscene7").style.display = "none";
+                console.log("yes");
+                document.querySelector("#storyscene8").style.display = "block";
+            }
+    
+    
+            else if(this.scene === 8) {
+                    this.shadowRoot.querySelector("a").href = this.getAttribute("link");
+    
+            }
         }
 
-
-        else if(this.scene === 8) {
-                this.shadowRoot.querySelector("a").href = this.getAttribute("link");
-
-        }
+    }
         
        
     }

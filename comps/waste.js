@@ -31,6 +31,7 @@ class SceneWaste extends HTMLElement {
 
     disappear() {
         this.shadowRoot.querySelector(".waste").style.display = "none";
+        this.style.visibility="hidden";
     }
 }
 
