@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="story.css">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
     <script src="./comps/icon.js"></script>
     <script src="./comps/header.js"></script>
@@ -174,6 +175,7 @@
 
         <!-- Animal graphics -->
 
+<<<<<<< HEAD
         <!-- <div class="clownfishgirl animal">
             <img src="./graphics/clown-fish-girl.png" alt="clown-fish-girl" class="clownfishgirl">
         </div> -->
@@ -181,9 +183,19 @@
         <nemo-char
         alt="Nemo igirl the fish" id="clownfishgirl"
         ></nemo-char>
+=======
+        <div class="clownfishgirl-animal">
+                <img src="./graphics/clown-fish-girl.png" alt="clown-fish-girl" class="clownfishgirl" id="clownfishgirl">
+                     <!--Add shopping bag so that two objects go together-->
+                <img src="./graphics/shopping-bag.png" alt="shopping bag " class="shoppingbag" id="shoppingbag">
+        </div>
+>>>>>>> 027ed5dfb183e3c3923238cd3bb0d3848960d80c
 
-        <div class="turtle animal">
-            <img src="./graphics/turtle.png" alt="turtle"class="turtle">
+        <div class="turtle-animal">
+            <!--Add water bottle so that two objects go together-->
+                <img src="./graphics/water-bottle.png" alt="Plastic water bottle " class="waterplasticbottle" id="waterplasticbottle">
+                <img src="./graphics/turtle.png" alt="turtle"class="turtle"id="turtle">
+               
         </div>
 
         <div class="imagefooter">
@@ -242,5 +254,22 @@
 //     }
 // }
 
+$(document).ready(function(){
+    document.querySelector("#waterplasticbottle").style.visibility = "hidden";  
+    document.querySelector("#turtle").style.visibility = "hidden";  
+    document.querySelector("#clownfishgirl").style.visibility = "hidden";  
+    document.querySelector("#shoppingbag").style.visibility = "hidden";  
+    $("#shoppingbag").click(function(){
+
+        document.querySelector("#shoppingbag").style.visibility = "hidden";  
+
+    });
+    $("#waterplasticbottle").click(function(){
+
+document.querySelector("#waterplasticbottle").style.visibility = "hidden";  
+
+});
+
+});
 
 // </script>
