@@ -56,6 +56,8 @@ class ContinueBtn extends HTMLElement {
             this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#storyscene1").style.display = "none";
             console.log("yes");
+            document.querySelector("#clownfishgirl").style.visibility = "visible";  
+            document.querySelector("#shoppingbag").style.visibility = "visible";  
             document.querySelector("#storyscene2").style.display = "block";
         }
         else if(this.scene === 3) {
@@ -68,6 +70,8 @@ class ContinueBtn extends HTMLElement {
             this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#storyscene3").style.display = "none";
             console.log("yes");
+            document.querySelector("#waterplasticbottle").style.visibility = "visible";  
+            document.querySelector("#turtle").style.visibility = "visible";  
             document.querySelector("#storyscene4").style.display = "block";
         }
         else if(this.scene === 5) {
