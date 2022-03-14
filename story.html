@@ -18,6 +18,7 @@
     <script src="./comps/contcard.js"></script>
     <script src="./comps/waste.js"></script>
     <script src="./comps/help.js"></script>
+    <script src="./comps/nemogirl.js"></script>
     
 
     <!-- <title>Welcome to OCEECO</title> -->
@@ -131,9 +132,21 @@
 
         <!-- Waste graphics -->
 
-        <div class="shoppingbag waste">
-            <img src="./graphics/shopping-bag.png" alt="shopping bag " class="shoppingbag">
-        </div>
+        <!-- <div class="shoppingbag waste">
+            <img src="./graphics/shopping-bag.png" alt="shopping bag " id="shoppingbag">
+        </div> -->
+
+        <!-- <scence-waste
+        img = "./graphics/shopping-bag.png"
+        id="shoppingbag"
+        alt="garbage"
+        ></scence-waste> -->
+
+        <scene-waste
+        img = "./graphics/shopping-bag.png"
+        id="shoppingbag"
+        alt="shoppingbag">
+        </scene-waste>
 
         <scene-waste
         img = "./graphics/garbage.png"
@@ -161,9 +174,13 @@
 
         <!-- Animal graphics -->
 
-        <div class="clownfishgirl animal">
+        <!-- <div class="clownfishgirl animal">
             <img src="./graphics/clown-fish-girl.png" alt="clown-fish-girl" class="clownfishgirl">
-        </div>
+        </div> -->
+
+        <nemo-char
+        alt="Nemo igirl the fish" id="clownfishgirl"
+        ></nemo-char>
 
         <div class="turtle animal">
             <img src="./graphics/turtle.png" alt="turtle"class="turtle">
@@ -214,16 +231,16 @@
 
 // });
 
-function clickTohide() {
-    var c = document.getElementById("#cup");
-    if (c.style.visibility === "visible") {
-        c.style.visibility === "none"
-    }
+// function clickTohide() {
+//     var c = document.getElementById("#cup");
+//     if (c.style.visibility === "visible") {
+//         c.style.visibility === "none"
+//     }
 
-    else {
-        c.style.visibility === "visible"
-    }
-}
+//     else {
+//         c.style.visibility === "visible"
+//     }
+// }
 
 
-</script>
+// </script>

@@ -32,6 +32,7 @@ class ContinueBtn extends HTMLElement {
         this.shadowRoot.querySelector(".cont-btn").onclick = () => {
             document.querySelector("#storyscene1").nextScene();
         }
+       
 
         
     // }
@@ -57,12 +58,15 @@ class ContinueBtn extends HTMLElement {
             document.querySelector("#storyscene1").style.display = "none";
             console.log("yes");
             document.querySelector("#storyscene2").style.display = "block";
+            document.querySelector("#clownfishgirl").style.display = "block";
+            document.querySelector("#shoppingbag").style.display = "block";
         }
         else if(this.scene === 3) {
             this.scene = this.scene + 1; console.log(this.scene);
             document.querySelector("#storyscene2").style.display = "none";
             console.log("yes");
             document.querySelector("#storyscene3").style.display = "block";
+            document.querySelector("#clownfishgirl").style.display = "none";
         }
         else if(this.scene === 4) {
             this.scene = this.scene + 1; console.log(this.scene);
@@ -94,15 +98,13 @@ class ContinueBtn extends HTMLElement {
             console.log("yes");
             document.querySelector("#storyscene8").style.display = "block";
         }
-
-
         else if(this.scene === 8) {
                 this.shadowRoot.querySelector("a").href = this.getAttribute("link");
 
-        }
-        
-       
+        }  
     }
+
+    
 
 
 }

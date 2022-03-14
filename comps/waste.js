@@ -5,7 +5,7 @@ var template_waste = document.createElement("template"); //<template> </template
 template_waste.innerHTML = `
 <link rel="stylesheet" href="./story.css">
 <div class="waste">
-    <img src="./graphics/garbage.png">
+    <img src="./graphics/shopping-bag.png">
 </div>
 `;
 
