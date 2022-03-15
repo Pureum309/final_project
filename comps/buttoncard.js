@@ -32,7 +32,7 @@ class BubbleBtn extends HTMLElement {
         this.shadowRoot.querySelector(".card-btn").innerText = this.getAttribute("btn");
         this.scene = 1;
         this.shadowRoot.querySelector(".card-btn").onclick = () => {
-            document.querySelector("#scene1").nextScene(a);
+            document.querySelector("#scene1").nextScene();
         }
     }   
 
@@ -51,20 +51,6 @@ class BubbleBtn extends HTMLElement {
             }
         }
     
-
-    // showScene2() {
-    //     this.scene = this.scene + 1;
-    //     console.log(this.scene);
-    //     document.querySelector("#scene1").style.display = "none";
-    //     console.log("yes");
-    //     document.querySelector("#scene2").style.display = "block";
-    // }
-
-
-    // showScene6() {
-    //     document.querySelector("#scene5").style.display = "none";
-    //     document.querySelector("#scene6").style.display = "block";
-    // }
 }
 
 //MUST HAVE - define the tag for the custom elements

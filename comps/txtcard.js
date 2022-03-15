@@ -34,20 +34,6 @@ class BubbleText extends HTMLElement {
         }
     }
 
-    // twoFunctions(){
-    //     document.getElementById('next-txt-btn').addEventListener('click', function(){
-    //         connectedCallback();
-    //         connectStorypage();
-    //     });
-    // }
-
-    // connectStorypage(){
-    //     // this.scene = 1;
-    //     this.shadowRoot.querySelector(".next-txt-btn").onclick = () => 
-    //         this.shadowRoot.getElementById("#first").storyNextscene();
-    // }
-
-    
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     nextScene(){
@@ -69,13 +55,6 @@ class BubbleText extends HTMLElement {
         }
     }
 
-    // storyNextscene(){
-    //     if(this.scene === 1) {
-    //         this.scene = this.scene + 1; console.log(this.scene);
-    //         document.querySelector("#storyscene1").style.display = "none";
-    //         document.querySelector("#storyscene2").style.display = "block";
-    //     }
-    // }
 }
 
 //MUST HAVE - define the tag for the custom elements

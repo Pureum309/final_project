@@ -46,14 +46,6 @@ class ContinueBtn extends HTMLElement {
             }
         }
        
-
-        
-    // }
-
-    // clickTohide(){
-    //     this.shadowRoot.querySelector(".cup").onclick = () => {
-    //         document.querySelector(".cup").hideIcons();
-    //     }
     }
 
 
